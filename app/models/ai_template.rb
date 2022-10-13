@@ -53,7 +53,7 @@ class AiTemplate
     }
 
     # avoid "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY)"
-    if ENV['open_ai_secret_key'] || Rails.application.credentials.open_ai_secret_key.nil?
+    if ENV['open_ai_secret_key'].nil? && Rails.application.credentials.open_ai_secret_key.nil?
       puts "You need to set the OPEN_AI_SECRET_KEY environment variable in Rails.application.credentials your OpenAI API key."
       exit 1
     end
