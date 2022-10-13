@@ -1,0 +1,22 @@
+<div class="columns is-multiline  is-centered">
+  <% session[:chosen_cards].split(', ') do |card| %>
+    <div class="column is-one-third">
+      <div class="card">
+        <!--
+        <div class="card-image">
+          <figure class="image is-3by6">
+            <img src="https://bulma.io/images/placeholders/480x640.png" alt="Placeholder image">
+          </figure>
+        </div>
+        -->
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4"><%= card %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

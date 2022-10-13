@@ -1,0 +1,19 @@
+<section class="hero is-primary has-text-centered">
+  <div class="hero-body">
+  <p class="subtitle">
+    The AI Psychic has shuffled the deck and chosen the following cards.
+  </p>
+</section>
+
+<section class="section">
+
+  <form method="get" action="<%= perform_tarot_reading_url %>">
+    <input type="hidden" name="cards" value="<%= @chosen_cards %>"/>
+    <%= render partial: 'cards' %>
+    <div class="columns has-text-centered mt-3">
+      <div class="column mt-3">
+        <button class="button is-primary" type="submit">Perform Reading</button>
+      </div>
+    </div>
+  </form>
+</section>

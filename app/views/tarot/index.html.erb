@@ -1,0 +1,35 @@
+
+
+<section class="hero is-primary has-text-centered">
+  <div class="hero-body">
+  <p class="title">AI Psychic</p>
+  <p class="subtitle">
+    Welcome! The all-knowing artificial intelligent psychic is here and ready to read your fortune!
+  </p>
+  </div>
+</section>
+
+<section class="section">
+<div class="columns is-centered is-multiline">
+  <div class="column is-half">
+    <%= image_tag 'ai-psychic.png' %>
+  </div>
+  <div class="column is-half">
+  <form method="get" action="<%= choose_tarot_cards_url %>">
+    <div class="field">
+      <label class="label">Number of Tarot Cards to Read:</label>
+      <div class="control">
+        <div class="select">
+          <select name="number">
+            <option value="1">1</option>
+            <option value="3" selected>3</option>
+            <option value="9">9</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button class="button is-primary" type="submit">Choose</button>
+  </form>
+  </div>
+</div>
+</section>
