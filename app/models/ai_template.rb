@@ -49,7 +49,7 @@ class AiTemplate
 
     request_headers = {
       "Content-Type" => "application/json",
-      "Authorization" => "Bearer #{Rails.application.credentials.open_ai_secret_key}"
+      "Authorization" => "Bearer #{ENV['open_ai_secret_key'] || Rails.application.credentials.open_ai_secret_key}"
     }
 
     # avoid "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY)"
